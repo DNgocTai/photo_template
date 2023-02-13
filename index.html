@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/css/reset.css">
+   <link rel="stylesheet" href="./assets/css/grid.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <title>Photo Template</title>
+   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <!-- Sidebar -->
+      <div class="sidebar hidden">
+         <i class="fa-solid fa-xmark sidebar__icon" onclick="hideShow()"></i>
+         <div class="menu-list">
+            <li class="menu-item">
+               <a href="#!" class="menu-link">About</a>
+            </li>
+            <li class="menu-item">
+               <a href="#!" class="menu-link">Photos</a>
+            </li>
+            <li class="menu-item">
+               <a href="#!" class="menu-link">Shop</a>
+            </li>
+            <li class="menu-item">
+               <a href="#!" class="menu-link">Contact</a>
+            </li>
+         </div>
+      </div>
+
+   <!-- Header -->
+   <header>
+      <nav class="nav">
+         <i class="fa-solid fa-bars nav__icon" onclick="hideShow()"></i>
+      </nav>
+      <div class="header">
+         <h1 class="title">
+            <b>PHOTOLIO</b>
+         </h1>
+         <p class="text">
+            <b>A template made by w3.css for photographers.</b>
+         </p>
+         <p class="btn-wrap">
+            <button class="btn" onclick="toggleBtn()">Toggle Grid Padding</button>
+         </p>
+      </div>
+   </header>
+
+   <!-- Gallery Photo-->
+   <div class="row no-gutters gallery">
+      <div class="col lg-4 m-4 sm-12">
+         <img src="./assets/images/rocks.jpg" alt="Rocks" class="photo mb">
+         <img src="./assets/images/sound.jpg" alt="Sound" class="photo mb">
+         <img src="./assets/images/woods.jpg" alt="Woods" class="photo mb">
+         <img src="./assets/images/rock.jpg" alt="Rock" class="photo mb">
+         <img src="./assets/images/nature.jpg" alt="Nature" class="photo mb">
+         <img src="./assets/images/mist.jpg" alt="Mist" class="photo mb">
+      </div>
+      <div class="col lg-4 m-4 sm-12">
+         <img src="./assets/images/coffee.jpg" alt="Rocks" class="photo mb">
+         <img src="./assets/images/bridge.jpg" alt="Sound" class="photo mb">
+         <img src="./assets/images/notebook.jpg" alt="Woods" class="photo mb">
+         <img src="./assets/images/london.jpg" alt="Rock" class="photo mb">
+         <img src="./assets/images/rocks.jpg" alt="Nature" class="photo mb">
+         <img src="./assets/images/avatar_g.jpg" alt="Mist" class="photo mb">
+      </div>
+      <div class="col lg-4 m-4 sm-12">
+         <img src="./assets/images/mist.jpg" alt="Rocks" class="photo mb">
+         <img src="./assets/images/workbench.jpg" alt="Sound" class="photo mb">
+         <img src="./assets/images/gondol.jpg" alt="Woods" class="photo mb">
+         <img src="./assets/images/skies.jpg" alt="Rock" class="photo mb">
+         <img src="./assets/images/lights.jpg" alt="Nature" class="photo mb">
+         <img src="./assets/images/workshop.jpg" alt="Mist" class="photo mb">
+      </div>
+   </div>
+
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="socials">
+         <a href="#!" class="socials__link">
+            <i class="fa-brands fa-square-facebook socials__icon"></i>
+         </a>
+         <a href="#!" class="socials__link">
+            <i class="fa-brands fa-instagram socials__icon"></i>
+         </a>
+         <a href="#!" class="socials__link">
+            <i class="fa-brands fa-snapchat socials__icon"></i>
+         </a>
+         <a href="#!" class="socials__link">
+            <i class="fa-brands fa-pinterest-p socials__icon"></i>
+         </a>
+         <a href="#!" class="socials__link">
+            <i class="fa-brands fa-twitter socials__icon"></i>
+         </a>
+         <a href="#!" class="socials__link">
+            <i class="fa-brands fa-linkedin-in socials__icon"></i>
+         </a>
+      </div>
+      <p class="coppyright">Powered by <a href="#!" class="coppyright-link">w3.css</a></p>
+      <p class="coppyright">Cloned by <a href="#!" class="coppyright-link dainn">Dainn</a></p>
+
+      <script>
+         // Toggle Padding
+         function toggleBtn() {
+            const cols = document.querySelectorAll('.col')
+            const gallery = document.querySelector('.gallery')
+
+            gallery.classList.toggle('p-8')
+            cols.forEach(function(item, index) {
+               item.classList.toggle('p-8')
+            })
+         }
+
+         // Hide/Show Sidebar
+         function hideShow() {
+            const sideBar = document.querySelector('.sidebar')
+            sideBar.classList.toggle('hidden')
+         }
+      </script>
+   </footer>
+</body>
+</html>
